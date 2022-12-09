@@ -1,0 +1,40 @@
+.footer-container {
+  padding: 80px 0;
+  background-color: $black;
+  font-family: $font-second, $font-family-fallback;
+
+  h2 {
+    font-size: $font-size-middle-3;
+    line-height: 1.17;
+    letter-spacing: $space-s;
+    padding-bottom: 8px;
+  }
+  .subheading {
+    display: block;
+    font-size: $font-size-small-1;
+    line-height: 1.43;
+    letter-spacing: $space-m;
+    padding-bottom: 20px;
+  }
+  .socials-icons {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    width: 100%;
+    @include small-mobile-view {
+      gap: 0;
+      justify-content: space-evenly;
+    }
+  }
+  .icon-facebook-f,
+  .icon-twitter,
+  .icon-linkedin,
+  .icon-youtube,
+  .icon-pinterest {
+    font-size: $font-size-socials-icons;
+    transition: all ease-in-out 0.3s;
+    &:hover {
+      color: $accent;
+    }
+  }
+}

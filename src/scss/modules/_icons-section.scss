@@ -1,0 +1,76 @@
+.icons-section {
+  padding: 60px 0;
+}
+
+.icons-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .line-holder {
+    display: none;
+    height: 30px;
+    @include desktop-view {
+      display: block;
+      width: 70%;
+      height: 40px;
+    }
+    @include desktop-m-view {
+      height: 50px;
+    }
+    @include desktop-l-view {
+      height: 57px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .icons-items-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    @include desktop-view {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  .icons-item-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icons-holder {
+    padding: 16px;
+    border-radius: 50%;
+    background-color: $dark-grey;
+    overflow: hidden;
+    width: 100px;
+  }
+
+  .subheading {
+    display: block;
+    font-size: $font-size-large-1;
+    line-height: 1.11;
+    padding-top: 4px;
+  }
+  .icon-search,
+  .icon-thumbs-up,
+  .icon-check-circle {
+    font-family: $font-main, $font-family-fallback;
+    font-size: $font-size-large-3;
+  }
+  .icon-search {
+    color: $accent;
+  }
+
+  .icon-check-circle {
+    color: $red;
+  }
+
+  .icon-thumbs-up {
+    color: $blue;
+  }
+}

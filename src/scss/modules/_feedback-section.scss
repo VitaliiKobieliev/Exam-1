@@ -1,0 +1,70 @@
+.feedback-section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 0 120px;
+
+  @include desktop-view {
+    padding: 120px 0 180px;
+  }
+}
+
+.feedback-section-container {
+  h2 {
+    font-size: $font-size-large-1;
+    line-height: 1.11;
+    padding-bottom: 60px;
+  }
+
+  .feedback-holder {
+    width: 100%;
+    @include desktop-view {
+      display: flex;
+    }
+  }
+
+  .img-holder {
+    width: 100%;
+    @include desktop-view {
+      width: calc(100% / 3);
+    }
+
+    img {
+      margin: 0 0 -3px;
+      width: 100%;
+      @include desktop-view {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .blockquote {
+    background-color: $dark-grey;
+    padding: 48px 60px;
+    font-family: $font-second, $font-family-fallback;
+    font-size: $font-size-middle-1;
+    text-align: left;
+
+    @include desktop-view {
+      width: calc(100% / 3 * 2);
+    }
+
+    figcaption {
+      line-height: 1.4;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+  }
+
+  .icon-quote-left {
+    color: $accent;
+  }
+
+  .text-description {
+    font-size: $font-size-small-2;
+    font-weight: $weight-light;
+    line-height: 1.75;
+    letter-spacing: $space-s;
+  }
+}

@@ -1,0 +1,64 @@
+.button {
+  font-family: $font-main, $font-family-fallback;
+  background-color: $accent;
+  color: $white;
+  border: 1px solid $accent;
+  font-size: $font-size-small-2;
+  line-height: 1.25;
+  letter-spacing: $space-s;
+  text-transform: uppercase;
+  padding: 20px 32px;
+  transition: all ease-in-out 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: $dark-accent;
+  }
+
+  &.button-effect {
+    width: 215px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -50px;
+      transform: rotate(45deg);
+      width: 150px;
+      height: 100px;
+      background-color: $dark-accent;
+    }
+    &.book {
+      display: block;
+      max-width: 208px;
+      width: 100%;
+    }
+  }
+
+  &.button-search {
+    width: 100%;
+    font-size: $font-size-small-1;
+    line-height: 1.43;
+    padding: 16px 20px;
+  }
+}
+.button-text {
+  font-size: $font-size-small-2;
+  line-height: 1.25;
+  letter-spacing: $space-s;
+  text-transform: uppercase;
+  padding: 20px 32px;
+  background-color: transparent;
+  border: transparent;
+  position: absolute;
+  padding: 0;
+  top: 20px;
+  left: 32px;
+  &.book {
+    left: calc(50% - 52px);
+  }
+}
